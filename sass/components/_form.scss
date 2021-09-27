@@ -1,0 +1,129 @@
+.form__name {
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: #212121;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.label-name {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.form-input,
+.comment {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+
+  padding-left: 42px;
+  margin-bottom: 10px;
+
+  &:focus {
+    border: 1px solid #2196f3;
+  }
+}
+
+.input-wrap {
+  position: relative;
+  /* display: block; */
+}
+
+.form-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.comment {
+  resize: none;
+  width: 100%;
+  min-height: 120px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+
+  &:focus {
+    border: 1px solid #2196f3;
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+  }
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.check-wrap {
+  margin-left: 12px;
+  margin-bottom: 30px;
+}
+
+.form-accent {
+  color: var(--accent-color);
+  padding-left: 1px;
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form-checkbox:checked + .checkbox-label > & {
+    background: #2196f3;
+    border: none;
+  }
+}
+
+.submit-button {
+  background: #2196f3;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  border-color: transparent;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}

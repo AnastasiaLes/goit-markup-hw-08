@@ -1,0 +1,126 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--secondary-background-color);
+}
+
+.footer__container {
+  display: flex;
+}
+
+.footer__logo {
+  color: var(--primary-white-color);
+  padding-bottom: 0;
+  padding-top: 0;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__address {
+  color: var(--primary-white-color);
+  font-style: normal;
+
+  margin-bottom: 9px;
+}
+
+.footer__contacts--link {
+  font-style: normal;
+  display: block;
+  color: var(--footer-contact-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.footer-socials__text {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  margin-bottom: 20px;
+}
+
+.footer__socials {
+  margin-left: 70px;
+  margin-right: auto;
+}
+
+.socials-list__link--footer {
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-socials__icon {
+  fill: #ffffff;
+}
+
+.footer-form__overlay {
+  display: inline-flex;
+}
+
+.footer-form {
+  margin-left: 93px;
+}
+
+.footer-form__title {
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.footer-form__email {
+  padding-left: 16px;
+  background: transparent;
+  height: 50px;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: #ffffff;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+
+    display: flex;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer__submit-btn {
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 1.87;
+
+  @include center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  margin-left: 12px;
+  border-color: transparent;
+
+  &::after {
+    content: "";
+    background-image: url(../images/icons/env-send.svg);
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+    margin-left: 10px;
+  }
+}
