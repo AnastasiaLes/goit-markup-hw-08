@@ -73,11 +73,17 @@
 .checkbox-label {
   display: flex;
   align-items: center;
+  font-size: 12px;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .check-wrap {
-  margin-left: 12px;
   margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 }
 
 .form-accent {

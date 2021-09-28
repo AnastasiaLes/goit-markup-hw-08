@@ -4,6 +4,7 @@
   align-items: center;
 }
 .header {
+  min-height: 60px;
   border-bottom: 1px solid #ececec;
 
   font-weight: 500;
@@ -14,7 +15,7 @@
 
 .site-nav {
   display: none;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     @include center;
   }
 }
@@ -52,15 +53,30 @@
 
 .site-contact {
   display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
   }
 }
 
 .site-contact__item + .site-contact__item {
-  margin-left: 50px;
+  margin-top: 10px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+    margin-top: 0;
+  }
+}
+.site-contact__item {
+  @media screen and (min-width: 768px) {
+    margin-left: 50px;
+  }
 }
 .site-contact__link {
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
   @include center;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -98,6 +114,10 @@
 .menu-open {
   width: 44px;
   height: 44px;
+  border: none;
+  background: transparent;
+  margin-top: 10px;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -107,6 +127,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  left: 0;
   background-color: #fff;
   width: 100vw;
   height: 100vh;
@@ -129,7 +150,8 @@
   color: var(--title-text-color);
   background-color: transparent;
   border: transparent;
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--accent-color);
   }
 }
@@ -150,6 +172,15 @@
     color: var(--accent-color);
   }
 }
+.mob-menu__tel {
+  font-size: 34px;
+  line-height: 1.18;
+  color: var(--primaty-text-color);
+}
+.mob-menu__mail {
+  font-size: 24px;
+  color: var(--primaty-text-color);
+}
 
 // .mob-menu__list {
 //   margin-bottom: 302px;
@@ -168,15 +199,17 @@
 }
 
 .mob-menu-socials__item {
-  &:not(:last-child) {
-    margin-right: 20px;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      height: 22px;
-      width: 2px;
-      background-color: rgba(33, 33, 33, 0.2);
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 1px;
+    margin-left: 10px;
+    background-color: rgba(33, 33, 33, 0.2);
   }
+  margin-right: 20px;
+}
+.mob-menu-socials__link {
+  color: var(--accent-color);
+  position: relative;
 }
