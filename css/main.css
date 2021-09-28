@@ -299,8 +299,8 @@ img {
 
 .mob-menu {
   position: fixed;
+  z-index: 9;
   top: 0;
-  right: 0;
   left: 0;
   background-color: #fff;
   width: 100vw;
@@ -891,7 +891,12 @@ img {
   border-top: transparent;
   padding: 20px 24px;
   flex-grow: 1;
-  max-width: 352px;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 352px;
+  }
 }
 
 .card--long {

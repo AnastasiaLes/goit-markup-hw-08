@@ -7,7 +7,7 @@
     flex-direction: row;
     margin-right: -30px;
     margin-bottom: -30px;
-    
+  }
 }
 
 .work-item {
@@ -42,7 +42,9 @@
   border-top: transparent;
   padding: 20px 24px;
   flex-grow: 1;
-  max-width: 352px;
+  @media screen and (min-width: 768px) {
+    max-width: 352px;
+  }
 }
 
 .card--long {
