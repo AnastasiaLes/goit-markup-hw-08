@@ -48,7 +48,9 @@
 }
 
 .card--long {
-  padding-bottom: 50px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 50px;
+  }
 }
 
 .work-list-title {

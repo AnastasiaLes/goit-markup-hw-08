@@ -106,7 +106,7 @@ img {
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
   font-size: 28px;
   line-height: 1.18;
@@ -522,6 +522,12 @@ img {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 768px) {
+  .benefits__title {
+    justify-content: flex-start;
+  }
+}
+
 .benefits__text {
   width: 100%;
 }
@@ -634,9 +640,16 @@ img {
 
 .team {
   margin-bottom: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #f5f4fa;
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team-list__item {
@@ -751,11 +764,18 @@ img {
 }
 
 .clients-list__item {
-  max-width: 210px;
+  width: 210px;
   height: 92px;
   flex-basis: calc(100% / 2 - 30px);
   margin-bottom: 30px;
   margin-right: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .clients-list__item {
+    width: 226px;
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -899,8 +919,10 @@ img {
   }
 }
 
-.card--long {
-  padding-bottom: 50px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card--long {
+    padding-bottom: 50px;
+  }
 }
 
 .work-list-title {
@@ -1076,7 +1098,7 @@ img {
 }
 
 .footer-form__overlay {
-  display: block;
+  display: inline-block;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1118,7 +1140,7 @@ img {
   padding-left: 16px;
   background: transparent;
   height: 50px;
-  width: 358px;
+  width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1137,6 +1159,7 @@ img {
 @media screen and (min-width: 1200px) {
   .footer-form__email {
     margin-bottom: 0;
+    width: 358px;
   }
 }
 
